@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactFormController;
 
 use App\Http\Controllers\ProjectController;
 
@@ -16,6 +17,10 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
     Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
 });
+
+Route::get('/contact', [ContactFormController::class, 'create'])->name('contact.create');
+Route::post('/contact', [ContactFormController::class, 'store'])->name('contact.store');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -4,7 +4,6 @@
 <div class="container mx-auto max-w-[1200px]">
     <h1 class="text-3xl font-bold mb-8">Edit Project</h1>
 
-    <!-- Edit form -->
     <form action="{{ route('projects.update', $project) }}" method="POST" enctype="multipart/form-data" class="mb-8">
         @csrf
         @method('PUT')

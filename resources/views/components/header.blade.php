@@ -4,6 +4,9 @@
         <a href="{{ route('projects.index') }}" class="text-xl font-bold text-gray-700 hover:text-gray-900">
             Projects
         </a>
+        <a href="{{ route('contact.create') }}" class="text-xl font-bold text-gray-700 hover:text-gray-900">
+            Contact
+        </a>
 
         <!-- Right side: Login/Register or Logout -->
         <div>

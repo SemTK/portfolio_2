@@ -3,8 +3,7 @@
 @section('content')
 <div class="container mx-auto max-w-[1400px]">
     <h1 class="text-4xl font-bold mb-8 text-center">My Portfolio</h1>
-    
-    <!-- Only show the Create New Project button if the user is logged in -->
+
     @auth
         <a href="{{ route('projects.create') }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-6 inline-block">Create New Project</a>
     @endauth
@@ -25,7 +24,6 @@
                 <h5 class="text-lg font-bold">{{ $project->title }}</h5>
                 <p class="text-gray-600 mt-2">{{ $project->description }}</p>
 
-                <!-- Only show the Edit button if the user is logged in -->
                 @auth
                     <a href="{{ route('projects.edit', $project) }}" class="block mt-4 bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-600">Edit</a>
                 @endauth
